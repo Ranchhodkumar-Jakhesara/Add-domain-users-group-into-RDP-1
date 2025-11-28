@@ -4,7 +4,7 @@ Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server' 
 # Allow RDP in Windows Firewall
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 
-# Add 'Domain Users' to the Remote Desktop Users group
+# Add 'Domain
 try {
     $group = [ADSI]"WinNT://$env:COMPUTERNAME/Remote Desktop Users,group"
     $domainUsers = "Domain Users"
